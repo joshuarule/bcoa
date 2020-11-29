@@ -1,8 +1,9 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import * as settings from '../../content/_data/settings/settings.json';
-import * as contact from '../../content/_data/contact/contact.json';
+// import * as settings from '../../content/_data/settings/settings.json';
+// import * as contact from '../../content/_data/contact/contact.json';
 // favicons
+import useSiteMetadata from './SiteMetadata';
 import faviconApple from '../favicon/apple-touch-icon.png';
 import favicon32 from '../favicon/favicon-32x32.png';
 import favicon16 from '../favicon/favicon-16x16.png';
@@ -13,13 +14,14 @@ const getSchemaOrgJSONLD = ({
   url,
   title
 }) => {
+  const settings = useSiteMetadata();
   const schemaOrgJSONLD = [
     {
       '@context': 'http://schema.org',
       '@type': 'WebSite',
       url,
       name: title,
-      alternateName: settings.title,
+      alternateName: settings.siteTitle,
     },
   ];
 
@@ -27,6 +29,8 @@ const getSchemaOrgJSONLD = ({
 };
 
 const SEO = ({ postData, postImage }) => {
+  const settings = useSiteMetadata();
+
   const postMeta = postData || {};
   const title = (postMeta.seo && postMeta.seo.title) || settings.siteTitle;
   const description =
@@ -66,7 +70,7 @@ const SEO = ({ postData, postImage }) => {
 
       {/* Twitter Card tags */}
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:creator" content={contact.twitter} />
+      {/* <meta name="twitter:creator" content={contact.twitter} /> */}
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
