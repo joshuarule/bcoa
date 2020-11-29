@@ -147,11 +147,10 @@ export const AboutPageTemplate = ({data}) => {
 
 const AboutPage = (props) => {
   return (
-    <Layout {...props} >
-      <AboutPageTemplate
-        data={props.data}
-      />
-    </Layout>
+    <Layout 
+      {...props} 
+      render={(ref, breakpoint) => <AboutPageTemplate data={props.data} intersectionRef={ref} breakpoint={breakpoint} /> }
+    /> 
   )
 }
 
