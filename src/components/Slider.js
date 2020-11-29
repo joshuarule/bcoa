@@ -6,7 +6,7 @@ import { icons } from "./Icons";
 
 const PrevArrow = ({ onClick }) => (
   <div className="container slick-container">
-    <button className="slick-arrow slick-previous c-white" onClick={onClick}>
+    <button title="previous image" className="slick-arrow slick-previous c-white" onClick={onClick}>
       {icons.carouselArrowLeft}
     </button>
   </div>
@@ -14,7 +14,7 @@ const PrevArrow = ({ onClick }) => (
 
 const NextArrow = ({ onClick }) => (
   <div className="container slick-container">
-    <button className="slick-arrow slick-next c-white" onClick={onClick} >
+    <button title="next image" className="slick-arrow slick-next c-white" onClick={onClick} >
       {icons.carouselArrowRight}
     </button>
   </div>

@@ -43,9 +43,12 @@ export default ({ visible, toggleMenu, isWindowLarge, navHeight, handleMenuButto
       <header className={visible ? 'c-white bg-transparent' : ''}>
         <div className="container">
           <div className="flex-1">
-            <Link className="headerLogo" onClick={ () => headerLogoClick(visible, toggleMenu) } to="/">{headerLogo}</Link>
+            <Link className="headerLogo" onClick={ () => headerLogoClick(visible, toggleMenu) } to="/">
+              <span className="screen-reader-text">Home</span>
+              {headerLogo}
+            </Link>
           </div>
-          <button className={`header-menuButton ${visible ? 'isActive' : ''}`} onClick={toggleMenu} >
+          <button title="toggle menue" className={`header-menuButton ${visible ? 'isActive' : ''}`} onClick={toggleMenu} >
             <div className="line lineExterior"></div>
             <div className="line lineInterior lineInterior-1"></div>
             <div className="line lineInterior lineInterior-2"></div>
