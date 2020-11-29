@@ -6,7 +6,7 @@ const FeaturedProjectImage = ({ image, className }) => {
   return (
     <Img
       fluid={ image }
-      outerWrapperClassName={className}
+      className={className}
     />
   )
 }
