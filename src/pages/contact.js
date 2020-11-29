@@ -67,11 +67,10 @@ export const ContactPageTemplate = ({ data }) => {
 
 const ContactPage = (props) => {
   return (
-    <Layout {...props} >
-      <ContactPageTemplate
-        data={props.data}
-      />
-    </Layout>
+    <Layout 
+      {...props} 
+      render={(ref, breakpoint) => <ContactPageTemplate data={props.data} breakpoint={breakpoint} intersectionRef={ref} /> } 
+    />
   )
 }
 

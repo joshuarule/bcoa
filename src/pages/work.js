@@ -93,9 +93,10 @@ class Work extends Component {
 
 const WorkPage = (props) => {
   return (
-    <Layout {...props} >
-      <Work data={props.data}/>
-    </Layout>
+    <Layout 
+      {...props} 
+      render={(ref, breakpoint) => <Work data={props.data} intersectionRef={ref} breakpoint={breakpoint} /> } 
+    />
   )
 }
 

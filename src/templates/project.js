@@ -7,7 +7,8 @@ import ProjectImage from "../components/ProjectImage";
 import MediaQuery from 'react-responsive';
 import SEO from "../components/SEO";
 
-const ProjectTemplate = ({ data }) => {
+const ProjectTemplate = ({ data, intersectionRef }) => {
+  // console.log(intersectionRef);
   const post = data.mdx;
   const fields = post.frontmatter;
   return (
@@ -29,29 +30,33 @@ const ProjectTemplate = ({ data }) => {
             <h2 className='f-page-title'>{fields.title}</h2>
           </div>
         </div>
-        <MediaQuery orientation={'portrait'} maxWidth={1224}>
-          {(matches) => {
-            if (matches && fields.heroImage && fields.heroImage.portraitImage) {
-              return (
-                <Img 
-                  className="projectHero" 
-                  fluid={ fields.heroImage.portraitImage.childImageSharp.fluid }
-                  alt={fields.heroImage.alt}
-                />
-              )
-            } else if (fields.heroImage && fields.heroImage.image) {
-              return (
-                <Img 
-                  className="projectHero" 
-                  fluid={ fields.heroImage.image.childImageSharp.fluid }
-                  alt={fields.heroImage.alt} 
-                />
-              )
-            } else {
-              return null
-            }
-          }}
-        </MediaQuery>
+        <div ref={intersectionRef}>
+
+          <MediaQuery orientation={'portrait'} maxWidth={1224}>
+            {(matches) => {
+              if (matches && fields.heroImage && fields.heroImage.portraitImage) {
+                return (
+                  <Img 
+                    
+                    className="projectHero" 
+                    fluid={ fields.heroImage.portraitImage.childImageSharp.fluid }
+                    alt={fields.heroImage.alt}
+                  />
+                )
+              } else if (fields.heroImage && fields.heroImage.image) {
+                return (
+                  <Img 
+                    className="projectHero" 
+                    fluid={ fields.heroImage.image.childImageSharp.fluid }
+                    alt={fields.heroImage.alt} 
+                  />
+                )
+              } else {
+                return null
+              }
+            }}
+          </MediaQuery>
+        </div>
         
         <div className="container marginTop-5 bp-1_marginTop-10 bp-2_marginTop-30">
           <div className="bp-1_grid-12col">
@@ -114,9 +119,7 @@ const ProjectTemplate = ({ data }) => {
 
 const ProjectPage = (props) => {
   return (
-    <Layout {...props}>
-      <ProjectTemplate data={props.data}/>
-    </Layout>
+    <Layout {...props} render={(ref) => <ProjectTemplate data={props.data} intersectionRef={ref} /> }/>
   )
 }
 

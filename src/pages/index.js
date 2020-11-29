@@ -43,11 +43,16 @@ class IndexPageTemplate extends Component {
         <SEO
           postImage={seo.image && seo.image.childImageSharp.fluid.src}
           postData={this.props.data.page.frontmatter}
-          />
-        <Slider 
-          className="hero" 
-          slides={ this.props.data.page.frontmatter.carouselImages } 
         />
+        <div
+          ref={this.props.intersectionRef}
+        >
+          <Slider
+            intersectionRef={this.props.intersectionRef}
+            className="hero" 
+            slides={ this.props.data.page.frontmatter.carouselImages } 
+          />
+        </div>
         <div ref={(el) => { if (el) { this.content = el } }} className="container overflow--hidden">
           <h2 className=" f-page-title
                           marginTop-8 marginBottom-7
@@ -76,11 +81,7 @@ class IndexPageTemplate extends Component {
 
 const IndexPage = (props) => {
   return (
-    <Layout {...props} >
-      <IndexPageTemplate
-        data={props.data}
-      />
-    </Layout>
+    <Layout {...props} render={(ref, breakpoint) => <IndexPageTemplate data={props.data} breakpoint={breakpoint} intersectionRef={ref} /> } />
   )
 }
 

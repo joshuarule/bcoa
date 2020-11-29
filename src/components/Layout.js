@@ -7,18 +7,20 @@ import HeaderNav from '../components/HeaderNav'
 import FixedLogo from '../components/FixedLogo'
 import "../styles/app.scss";
 import {useCurrentBreakpoint} from '../hooks/useCurrentBreakpoint';
-import useIntersection from '../hooks/useIntersection';
+import { useInView } from 'react-intersection-observer';
 
-const TemplateWrapper = ({children, path}) => {
+const TemplateWrapper = ({path, render}) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const breakpoint = useCurrentBreakpoint();
 
   // set up intersection observer for vertical logo
-  const [ref, entry] = useIntersection({rootMargin: '-49%'});
+  // const hero = document.querySelector('.hero') || document.querySelector('.projectHero');
+  // const [ref, entry] = useIntersection({root: hero, rootMargin: '-49%'});
+  const { ref, inView } = useInView({rootMargin: '-49%'});
   // pass intersection ref down to children
-  const childrenWithProps = React.Children.map(children, (child, i) =>
-    React.cloneElement(child, { intersectionReference: ref, breakpoint })
-  );
+  // const childrenWithProps = React.Children.map(children, (child, i) =>
+  //   React.cloneElement(child, { intersectionReference: ref, breakpoint })
+  // );
 
   const homeClasses = classnames({
     'blackFixedLogo': path.replace(/\//g, '') === 'work' && breakpoint === 'large',
@@ -26,7 +28,7 @@ const TemplateWrapper = ({children, path}) => {
     'bg-lightRed c-red': ( path.replace(/\//g, '') === 'about'
                         || path.replace(/\//g, '') === 'contact' ),
     'hideFixedLogo': path.replace(/\//g, '') === 'news'
-                || ( path.replace(/\//g, '') === 'work' && breakpoint === 'large' )
+                || ( path.replace(/\//g, '') === 'work' && breakpoint === 'medium' )
                 || ( path.replace(/\//g, '') === 'contact' && breakpoint === 'medium' )
                 || ( path.replace(/\//g, '') === '' && breakpoint === 'small' ),
   })
@@ -46,9 +48,9 @@ const TemplateWrapper = ({children, path}) => {
           // navHeight=      { this.state.navHeight }
         />
       </Headroom>
-      <FixedLogo isDark={ !entry.isIntersecting } isWindowMedium={ breakpoint === "medium" } />
-      <div>
-        {childrenWithProps}
+      <FixedLogo isDark={ !inView } isWindowMedium={ breakpoint === "medium" } />
+      <div className="main" >
+        {render(ref, breakpoint)}
       </div>
       <Footer />
     </div>

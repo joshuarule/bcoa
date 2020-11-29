@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import Img from 'gatsby-image';
@@ -7,7 +6,7 @@ import Layout from '../components/Layout'
 import SEO from "../components/SEO";
 // import Content, { HTMLContent } from '../components/Content'
 
-export const AboutPageTemplate = ({ data, intersectionRef }) => {
+export const AboutPageTemplate = ({data}) => {
   // const PageContent = contentComponent || Content
   const post = data.mdx;
   const fields = post.frontmatter;
@@ -32,7 +31,7 @@ export const AboutPageTemplate = ({ data, intersectionRef }) => {
       </h1>
       <div className="bp-2_grid-12col bp-1_grid-12col">
         <div
-          ref={intersectionRef}
+          // ref={intersectionRef}
           className=" md
                       f-display-copy
                       marginBottom-15
@@ -146,11 +145,6 @@ export const AboutPageTemplate = ({ data, intersectionRef }) => {
   );
 }
 
-AboutPageTemplate.propTypes = {
-  content: PropTypes.string,
-  contentComponent: PropTypes.func,
-}
-
 const AboutPage = (props) => {
   return (
     <Layout {...props} >
@@ -159,10 +153,6 @@ const AboutPage = (props) => {
       />
     </Layout>
   )
-}
-
-AboutPage.propTypes = {
-  data: PropTypes.object.isRequired,
 }
 
 export const aboutPageQuery = graphql`

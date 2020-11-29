@@ -123,11 +123,10 @@ export const NewsPageTemplate = ({ data, breakpoint }) => {
 
 export default (props) => {
   return (
-    <Layout {...props} >
-      <NewsPageTemplate
-        data={props.data}
-      />
-    </Layout>
+    <Layout 
+      {...props} 
+      render={(_, breakpoint) => <NewsPageTemplate data={props.data} breakpoint={breakpoint} />} 
+    />
   )
 }
 

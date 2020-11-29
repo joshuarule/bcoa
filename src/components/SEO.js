@@ -14,14 +14,13 @@ const getSchemaOrgJSONLD = ({
   url,
   title
 }) => {
-  const settings = useSiteMetadata();
   const schemaOrgJSONLD = [
     {
       '@context': 'http://schema.org',
       '@type': 'WebSite',
       url,
       name: title,
-      alternateName: settings.siteTitle,
+      alternateName: title,
     },
   ];
 
