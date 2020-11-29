@@ -1,0 +1,26 @@
+.project-name {
+  height: var(--unit-12);
+  display: flex;
+  align-items: center;
+}
+
+.project-primaryImage {
+  position: relative;
+}
+
+.project-primaryImage figure {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+
+  @include only_bp-0 {
+    position: relative !important;
+  }
+}
+
+.project-blockquote {
+  @include bp-1 {
+    margin-left: 9.6%
+  }
+}

@@ -1,0 +1,46 @@
+.hide { display: none !important; }
+
+.block { display: block; }
+
+.t-center { text-align: center; }
+
+.absolute { position: absolute; }
+
+.relative { position: relative !important; }
+
+.overflow--hidden {
+  overflow: hidden;
+}
+
+//////////    FLEX    \\\\\\\\\\
+
+.flex { display: flex; }
+
+.flex-1 { flex: 1 }
+
+.alignItems-flexEnd { align-items: flex-end; }
+
+.justifySpaceBetween { justify-content: space-between; }
+
+////////    HOVER STATES    \\\\\\\\\\
+
+.textDecorationNone { text-decoration: none; }
+
+.underline { text-decoration: underline; }
+
+@mixin underlineHover {
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+@mixin underlineActive {
+  &:active {
+    text-decoration: underline;
+  }
+}
+
+.defaultLink {
+  @include underlineHover;
+  @include underlineActive;
+}

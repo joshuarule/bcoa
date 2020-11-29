@@ -1,0 +1,84 @@
+$slickArrowSize: 28px;
+
+.slick-container {
+  position: absolute;
+  width: 100%;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  transform: translateX(-50%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.slick-arrow {
+  box-sizing: content-box;
+  padding: var(--unit-4);
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  width: $slickArrowSize;
+  height: $slickArrowSize;
+  margin-top: -$slickArrowSize / 2;
+  cursor: pointer;
+  pointer-events: auto;
+
+  > svg {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.slick-next     { right: calc((var(--unit-4) - 28px) * -1); }
+.slick-previous { left:  calc((var(--unit-4) - 28px) * -1); }
+
+.slick-list, .slick-track {
+  flex: 1 0 0%;
+  display: flex !important;
+  min-width: 0;
+  min-height: 0;
+}
+
+.slick-list {
+  flex-direction: column;
+  min-width: 0;
+  min-height: 0;
+}
+
+.slick-slide {
+  min-width: 0;
+  min-height: 0;
+  flex: 1 0 0%;
+  display: flex !important;
+  overflow: hidden;
+
+  > div {
+    display: flex !important;
+    flex: 1 0 0%;
+  }
+
+  .slide {
+    position: relative;
+    display: flex !important;
+  }
+
+  .gatsby-image-outer-wrapper,
+  .gatsby-image-wrapper, {
+    flex: 1;
+    display: flex !important;
+  }
+  img {
+    object-position: center center;
+  }
+}
+
+.slide-info {
+  position: absolute;
+  bottom: var(--unit-10);
+  left: var(--unit-10);
+  pointer-events: auto;
+
+  a:hover {
+    text-decoration: underline;
+  }
+}

@@ -1,0 +1,39 @@
+.hero {
+  height: calc(100vh - var(--header-height));
+  display: flex;
+
+  @include bp-1 {
+    height: calc(100vh - var(--header-height));
+  }
+
+  @include bp-2 {
+    height: calc(100vh - var(--header-height));
+  }
+
+  img {
+    flex: 1 0 0%;
+    object-fit: cover;
+  }
+}
+
+.projectHero {
+  height: calc(100vh - var(--header-height) - var(--project-title-height));
+  display: flex;
+
+  @media only screen and (orientation: landscape) {
+    min-height: 20rem;
+  }
+
+  @include bp-1 {
+    height: calc(100vh - var(--header-height) - var(--project-title-height));
+  }
+
+  @include bp-2 {
+    height: calc(100vh - var(--header-height) - var(--project-title-height) + 3px);
+  }
+
+  img {
+    flex: 1 0 0%;
+    object-fit: cover;
+  }
+}
