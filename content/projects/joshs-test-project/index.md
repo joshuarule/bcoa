@@ -39,7 +39,7 @@ projectGallery:
     alt: first image test
     caption: this is the first image caption
     type: image
-    pullQuote: apparently this is required
+    pullQuote: ""
   - image: /images/uploads/placeholder.jpg
     colWidth: "1"
     offsetWidth: "0"
