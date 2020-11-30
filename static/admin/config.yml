@@ -13,6 +13,8 @@ collections:
         label: "About Page"
         media_folder: ''
         public_folder: ''
+        editor:
+          preview: false
         file: "content/pages/about/index.md"
         fields:
           - label: SEO
@@ -72,6 +74,8 @@ collections:
         label: "Contact Page"
         media_folder: ''
         public_folder: ''
+        editor:
+          preview: false
         file: "content/pages/contact/index.md"
         fields:
           - label: SEO
@@ -93,6 +97,8 @@ collections:
       
       - name: "newsPage"
         label: "News Page"
+        editor:
+          preview: false
         media_folder: ''
         public_folder: ''
         file: "content/pages/news/index.md"
@@ -111,6 +117,8 @@ collections:
         label: "Index / Work Page"
         media_folder: ''
         public_folder: ''
+        editor:
+          preview: false
         file: "content/pages/work/index.md"
         fields:
           - label: SEO
@@ -137,6 +145,8 @@ collections:
         label: "Featured / Home Page"
         media_folder: ''
         public_folder: ''
+        editor:
+          preview: false
         file: "content/pages/index/index.md"
         fields:
           - label: SEO
@@ -334,6 +344,8 @@ collections:
 
   - name: "articles"
     label: "Articles"
+    editor:
+      preview: false
     folder: "content/articles"
     path: '{{path}}/index'
     media_folder: ''
