@@ -39,8 +39,8 @@ collections:
                   - { label: "Image", name: "image", widget: "image" }
                   - { label: "Alt", name: "alt", widget: "string" }
               - { label: "Job Title", name: "jobTitle", widget: "string" }
-              - { label: "Principal Info", name: "principalInfo", widget: "string", required: "false" }
-              - { label: "Member Description", name: "description", widget: "text", required: "false" }
+              - { label: "Principal Info", name: "principalInfo", widget: "string", required: false }
+              - { label: "Member Description", name: "description", widget: "text", required: false }
           - label: Publications
             name: publications
             widget: list

@@ -12,15 +12,7 @@ import { useInView } from 'react-intersection-observer';
 const TemplateWrapper = ({path, render}) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const breakpoint = useCurrentBreakpoint();
-
-  // set up intersection observer for vertical logo
-  // const hero = document.querySelector('.hero') || document.querySelector('.projectHero');
-  // const [ref, entry] = useIntersection({root: hero, rootMargin: '-49%'});
   const { ref, inView } = useInView({rootMargin: '-49%'});
-  // pass intersection ref down to children
-  // const childrenWithProps = React.Children.map(children, (child, i) =>
-  //   React.cloneElement(child, { intersectionReference: ref, breakpoint })
-  // );
 
   const homeClasses = classnames({
     'blackFixedLogo': path.replace(/\//g, '') === 'work' && breakpoint === 'large',
@@ -32,8 +24,6 @@ const TemplateWrapper = ({path, render}) => {
                 || ( path.replace(/\//g, '') === 'contact' && breakpoint === 'medium' )
                 || ( path.replace(/\//g, '') === '' && breakpoint === 'small' ),
   })
-
-  // Helmet
 
   return (
     <div className={homeClasses}>
