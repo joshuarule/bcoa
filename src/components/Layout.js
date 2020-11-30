@@ -24,6 +24,7 @@ const TemplateWrapper = ({path, render}) => {
                 || ( path.replace(/\//g, '') === 'contact' && breakpoint === 'medium' )
                 || ( path.replace(/\//g, '') === '' && breakpoint === 'small' ),
   })
+  console.log(breakpoint);
 
   return (
     <div className={homeClasses}>

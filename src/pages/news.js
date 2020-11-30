@@ -39,8 +39,7 @@ class Article extends Component {
               <Img
                 fluid={article.frontmatter.image.image.childImageSharp.fluid}
                 alt={article.frontmatter.image.alt}
-                outerWrapperClassName={"colSpan-4"}
-                className=" marginBottom-5
+                className="colSpan-4 testing marginBottom-5
                             bp-2_marginBottom-6"
               />
               :
@@ -53,7 +52,7 @@ class Article extends Component {
             <Img
               fluid={article.frontmatter.image.image.childImageSharp.fluid}
               alt={article.frontmatter.image.alt}
-              className=" marginBottom-5
+              className="colSpan-4 marginBottom-5
                           bp-2_marginBottom-6"
             />
             :

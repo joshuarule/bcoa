@@ -135,6 +135,8 @@ collections:
 
       - name: "featuredPage"
         label: "Featured / Home Page"
+        media_folder: ''
+        public_folder: ''
         file: "content/pages/index/index.md"
         fields:
           - label: SEO
