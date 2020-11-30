@@ -5,8 +5,9 @@ seo:
   title: Work SEO title
 templateKey: work
 title: Index
-workDescription: ''
+workDescription: ""
 projects:
+  - project: Josh's Test project
   - project: NECD @ BNY
   - project: S-M-L Loft
   - project: 740 Broadway Lobby
@@ -36,4 +37,3 @@ projects:
   - project: Zhuhai Exhibition Center
   - project: East River Kiosk
 ---
-
