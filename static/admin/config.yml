@@ -162,8 +162,8 @@ collections:
             name: "carouselImages"
             widget: "list"
             fields:
+              - { label: "Landscape Image", name: "image", widget: "image" }
               - { label: "Portrait Image", name: "portraitImage", widget: "image" }
-              - { label: "Image", name: "image", widget: "image" }
               - { label: "Alt Text", name: "alt", widget: "string", default: "carousel image alt text" }
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Subtitle", name: "subtitle", widget: "string", required: false }

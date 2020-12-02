@@ -81,7 +81,7 @@ class IndexPageTemplate extends Component {
 
 const IndexPage = (props) => {
   return (
-    <Layout {...props} render={(ref, breakpoint) => <IndexPageTemplate data={props.data} breakpoint={breakpoint} intersectionRef={ref} /> } />
+    <Layout {...props} render={(ref, breakpoint) => <IndexPageTemplate data={props.data} breakpoint={breakpoint} location={props.location} intersectionRef={ref} /> } />
   )
 }
 
