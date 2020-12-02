@@ -37,8 +37,7 @@ const headerLogoClick = (visible, toggleMenu) => {
 }
 
 export default ({ visible, toggleMenu, isWindowLarge, navHeight, handleMenuButtonClick }) => {
-  const headerLogo = (isWindowLarge === undefined) ? "" : isWindowLarge ? icons.menuLogoLarge : icons.menuLogoSmall
-  console.log("isWindowLarge", isWindowLarge);
+  const headerLogo = (isWindowLarge === undefined) ? icons.menuLogoLarge : isWindowLarge ? icons.menuLogoLarge : icons.menuLogoSmall
   return (
     <div>
       <header className={visible ? 'c-white bg-transparent' : ''}>
