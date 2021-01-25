@@ -57,47 +57,56 @@ projectGallery:
     offsetWidth: "0"
     alt: Soho Loft NYC Architect Architecture Gut Renovation Renovate Steel Detail
       Custom Metalwork
+    caption: "Corner detail of the custom metalwork "
   - colWidth: "8"
     image: object-loft_-6-_1820_cropped.jpg
     offsetWidth: "4"
     type: image
     alt: "Soho Loft NYC Architect Architecture Gut Renovation Renovate Cast Iron
       Column Exposed Beam "
+    caption: A view encapsulating the S object (left), M object (kitchen) and L
+      object (right)
   - colWidth: "8"
     image: object-loft_-4-_2480_cropped.jpg
     type: image
     offsetWidth: "0"
     alt: "Soho Loft NYC Architect Architecture Gut Renovation Renovate Lighting
       Designer Architect Detail Cove Light "
+    caption: Razor edge indirect lighting detail at the ceiling
   - colWidth: "4"
     image: object-loft_-3-_1160_cropped.jpg
     type: image
     offsetWidth: "10"
     alt: Soho Loft NYC Architect Architecture Gut Renovation Renovate Steel Detail
       Custom Metalwork Ladder
+    caption: The custom library ladder can access the uppers at each of the objects
   - colWidth: "12"
     image: object-loft_promo-plan_1820_cropped.jpg
     type: image
     offsetWidth: "0"
     alt: Soho Loft NYC Architect Architecture Gut Renovation Renovate Plan
+    caption: Loft Plan
   - colWidth: "12"
     image: OBJECT-LOFT_-(17)_1820.jpg
     type: image
     offsetWidth: "0"
     alt: Soho Loft NYC Architect Architecture Gut Renovation Renovate Dining
       Bulthaup Kitchen Cast Iron Column
+    caption: View to dining and Bulthaup kitchen
   - colWidth: "8"
     image: object-loft_-20-_1820_cropped.jpg
     offsetWidth: "4"
     type: image
     alt: Soho Loft NYC Architect Architecture Gut Renovation Renovate Bathroom
       Custom Concrete Walnut Cove Light
+    caption: Custom concrete panels create the shower enclosure with a indirect lighting
   - alt: Soho Loft NYC Architect Architecture Gut Renovation Renovate Plan Custom
       Metalwork
     colWidth: "10"
     image: copyright_barkow_photo_6517a.jpg
     offsetWidth: "0"
     type: image
+    caption: The M object conceals a powder room, office, A/V closet and general storage
 ---
 The gut renovation of this 2500sf cast iron SoHo Loft responds to the industrial history of the building. The plan of the existing loft provided a clean, rectangular geometry punctuated by a common entryway and egress stair. The design response embraces this geometry by wrapping these two volumes and a third created by the kitchen in a bespoke, operable metal cladding system, creating three standing objects - Small, Medium and Large. These volumes float within the otherwise pure geometry of the floor plan, straddling the original line of cast-iron columns and exposed timber beam, and generating a visual contrast of new against old from front to back of the residence.
 
