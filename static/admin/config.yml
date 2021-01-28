@@ -383,12 +383,14 @@ collections:
               label: "Alt Text",
               name: "alt",
               widget: "string",
+              required: false,
               default: "project image alt",
             }
           - {
               label: "Caption",
               name: "caption",
               widget: "string",
+              required: false,
               default: "project image caption",
             }
 
