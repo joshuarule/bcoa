@@ -2,6 +2,8 @@ backend:
   name: git-gateway
   branch: master
 
+local_backend: true
+
 media_folder: content/assets
 public_folder: /assets
 
@@ -11,8 +13,8 @@ collections:
     files:
       - name: "aboutPage"
         label: "About Page"
-        media_folder: ''
-        public_folder: ''
+        media_folder: ""
+        public_folder: ""
         editor:
           preview: false
         file: "content/pages/about/index.md"
@@ -20,11 +22,16 @@ collections:
           - label: SEO
             name: seo
             widget: object
-            fields: 
+            fields:
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Description", name: "description", widget: "text" }
               - { label: "Image", name: "image", widget: "image" }
-          - { label: "Template Key", name: "templateKey", widget: "hidden", default: "about" }
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "about",
+            }
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Description", name: "body", widget: "markdown" }
           - label: Studio Members
@@ -41,15 +48,30 @@ collections:
                   - { label: "Image", name: "image", widget: "image" }
                   - { label: "Alt", name: "alt", widget: "string" }
               - { label: "Job Title", name: "jobTitle", widget: "string" }
-              - { label: "Principal Info", name: "principalInfo", widget: "string", required: false }
-              - { label: "Member Description", name: "description", widget: "text", required: false }
+              - {
+                  label: "Principal Info",
+                  name: "principalInfo",
+                  widget: "string",
+                  required: false,
+                }
+              - {
+                  label: "Member Description",
+                  name: "description",
+                  widget: "text",
+                  required: false,
+                }
           - label: Publications
             name: publications
             widget: list
             fields:
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Publisher", name: "publisher", widget: "string" }
-              - { label: "Published Date", name: "date", widget: "date", format: "MMMM D, YYYY" }
+              - {
+                  label: "Published Date",
+                  name: "date",
+                  widget: "date",
+                  format: "MMMM D, YYYY",
+                }
               - { label: "Visible Date", name: "visibleDate", widget: "string" }
               - { label: "URL", name: "url", widget: "string" }
           - label: Awards
@@ -57,8 +79,17 @@ collections:
             widget: list
             fields:
               - { label: "Award Title", name: "title", widget: "string" }
-              - { label: "Organization Name", name: "orgName", widget: "string" }
-              - { label: "Date", name: "date", widget: "date", format: "MMMM D, YYYY" }
+              - {
+                  label: "Organization Name",
+                  name: "orgName",
+                  widget: "string",
+                }
+              - {
+                  label: "Date",
+                  name: "date",
+                  widget: "date",
+                  format: "MMMM D, YYYY",
+                }
               - { label: "Visible Date", name: "visibleDate", widget: "string" }
               - { label: "URL", name: "url", widget: "string" }
           - label: Collaborators
@@ -67,13 +98,18 @@ collections:
             fields:
               - { label: "Name", name: "name", widget: "string" }
               - { label: "Job title", name: "jobTitle", widget: "string" }
-              - { label: "Description", name: "description", widget: "string", required: false }
+              - {
+                  label: "Description",
+                  name: "description",
+                  widget: "string",
+                  required: false,
+                }
               - { label: "URL", name: "url", widget: "string", required: false }
 
       - name: "contactPage"
         label: "Contact Page"
-        media_folder: ''
-        public_folder: ''
+        media_folder: ""
+        public_folder: ""
         editor:
           preview: false
         file: "content/pages/contact/index.md"
@@ -81,11 +117,16 @@ collections:
           - label: SEO
             name: seo
             widget: object
-            fields: 
+            fields:
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Description", name: "description", widget: "text" }
               - { label: "Image", name: "image", widget: "image" }
-          - { label: "Template Key", name: "templateKey", widget: "hidden", default: "contact" }
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "contact",
+            }
           - { label: "Title", name: "title", widget: "string" }
           - label: Hero Image
             name: heroImage
@@ -94,29 +135,34 @@ collections:
               - { label: "Image", name: "image", widget: "image" }
               - { label: "Alt", name: "alt", widget: "string" }
           - { label: "Message", name: "message", widget: "text" }
-      
+
       - name: "newsPage"
         label: "News Page"
         editor:
           preview: false
-        media_folder: ''
-        public_folder: ''
+        media_folder: ""
+        public_folder: ""
         file: "content/pages/news/index.md"
         fields:
           - label: SEO
             name: seo
             widget: object
-            fields: 
+            fields:
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Description", name: "description", widget: "text" }
               - { label: "Image", name: "image", widget: "image" }
-          - { label: "Template Key", name: "templateKey", widget: "hidden", default: "news" }
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "news",
+            }
           - { label: "Title", name: "title", widget: "string" }
 
       - name: "indexPage"
         label: "Index / Work Page"
-        media_folder: ''
-        public_folder: ''
+        media_folder: ""
+        public_folder: ""
         editor:
           preview: false
         file: "content/pages/work/index.md"
@@ -124,11 +170,16 @@ collections:
           - label: SEO
             name: seo
             widget: object
-            fields: 
+            fields:
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Description", name: "description", widget: "text" }
               - { label: "Image", name: "image", widget: "image" }
-          - { label: "Template Key", name: "templateKey", widget: "hidden", default: "work" }
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "work",
+            }
           - { label: "Title", name: "title", widget: "string" }
           - label: "Projects"
             name: "projects"
@@ -143,8 +194,8 @@ collections:
 
       - name: "featuredPage"
         label: "Featured / Home Page"
-        media_folder: ''
-        public_folder: ''
+        media_folder: ""
+        public_folder: ""
         editor:
           preview: false
         file: "content/pages/index/index.md"
@@ -152,21 +203,40 @@ collections:
           - label: SEO
             name: seo
             widget: object
-            fields: 
+            fields:
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Description", name: "description", widget: "text" }
               - { label: "Image", name: "image", widget: "image" }
-          - { label: "Template Key", name: "templateKey", widget: "hidden", default: "index" }
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "index",
+            }
           - { label: "Title", name: "title", widget: "string" }
           - label: "Carousel Images"
             name: "carouselImages"
             widget: "list"
             fields:
               - { label: "Landscape Image", name: "image", widget: "image" }
-              - { label: "Portrait Image", name: "portraitImage", widget: "image" }
-              - { label: "Alt Text", name: "alt", widget: "string", default: "carousel image alt text" }
+              - {
+                  label: "Portrait Image",
+                  name: "portraitImage",
+                  widget: "image",
+                }
+              - {
+                  label: "Alt Text",
+                  name: "alt",
+                  widget: "string",
+                  default: "carousel image alt text",
+                }
               - { label: "Title", name: "title", widget: "string" }
-              - { label: "Subtitle", name: "subtitle", widget: "string", required: false }
+              - {
+                  label: "Subtitle",
+                  name: "subtitle",
+                  widget: "string",
+                  required: false,
+                }
               - label: "Related Project"
                 name: "project"
                 widget: "relation"
@@ -183,30 +253,50 @@ collections:
                 collection: "projects"
                 searchFields: ["title"]
                 valueField: "title"
-          
+
   - name: "projects"
     label: "Projects"
-    media_folder: ''
-    public_folder: ''
+    media_folder: ""
+    public_folder: ""
     folder: "content/projects"
-    path: '{{slug}}/index'
+    path: "{{slug}}/index"
     create: true
     fields:
       - label: Set Published
         name: isPublished
         widget: boolean
         default: true
+      - label: Condition test
+        name: condition
+        widget: condition
+        conditions:
+          - label: Object one
+            name: one
+            widget: object
+            required: false
+            fields:
+              - { label: "title", name: "title", widget: "string" }
       - label: SEO Overrides
         name: seo
         widget: object
         required: false
-        fields: 
+        fields:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Description", name: "description", widget: "text" }
           - { label: "Image", name: "image", widget: "image" }
-      - { label: "Template Key", name: "templateKey", widget: "hidden", default: "project" }
+      - {
+          label: "Template Key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "project",
+        }
       - { label: "Project Name", name: "title", widget: "string" }
-      - { label: "Work Description", name: "workDescription", widget: "string", required: false }
+      - {
+          label: "Work Description",
+          name: "workDescription",
+          widget: "string",
+          required: false,
+        }
       - label: Type
         name: type
         widget: select
@@ -221,12 +311,21 @@ collections:
         widget: object
         required: false
         fields:
-          - { label: "Portrait Hero Image", name: "portraitImage", widget: "image" }
+          - {
+              label: "Portrait Hero Image",
+              name: "portraitImage",
+              widget: "image",
+            }
           - { label: "Landscape Hero Image", name: "image", widget: "image" }
           - { label: "Alt", name: "alt", widget: "string" }
-      - { label: "Headline", name: "headline", widget: "string", required: false }
+      - {
+          label: "Headline",
+          name: "headline",
+          widget: "string",
+          required: false,
+        }
       - label: Featured
-        name: featured 
+        name: featured
         widget: object
         required: false
         fields:
@@ -238,7 +337,7 @@ collections:
             name: featuredImage
             widget: object
             required: false
-            condition: 
+            condition:
               field: isFeatured
               value: true
             fields:
@@ -252,11 +351,11 @@ collections:
             name: featuredDescription
             widget: text
             required: false
-            patter: ['^(.{0,280})$', 'Must have less than 280 characters']
-            condition: 
+            patter: ["^(.{0,280})$", "Must have less than 280 characters"]
+            condition:
               field: isFeatured
               value: true
-              
+
       - label: Index Page Image
         name: previewImage
         widget: object
@@ -264,7 +363,7 @@ collections:
         fields:
           - { label: "Image", name: "image", widget: "image" }
           - { label: "Alt", name: "alt", widget: "string" }
-      
+
       - { label: "Body", name: "body", widget: "markdown", required: false }
       - label: Info Object
         name: infoObject
@@ -280,8 +379,18 @@ collections:
         required: false
         fields:
           - { label: "Image", name: "image", widget: "image" }
-          - { label: "Alt Text", name: "alt", widget: "string", default: "project image alt" }
-          - { label: "Caption", name: "caption", widget: "string", default: "project image caption" }
+          - {
+              label: "Alt Text",
+              name: "alt",
+              widget: "string",
+              default: "project image alt",
+            }
+          - {
+              label: "Caption",
+              name: "caption",
+              widget: "string",
+              default: "project image caption",
+            }
 
       - label: "Project Gallery Items"
         name: "projectGallery"
@@ -300,30 +409,32 @@ collections:
             name: "image"
             widget: "image"
             required: false
-            condition: 
+            condition:
               field: type
               value: image
           - label: "Column Width"
             name: "colWidth"
             widget: "select"
-            options: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"]
+            options:
+              ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"]
             default: "1"
-            condition: 
+            condition:
               field: type
               value: image
           - label: "Offset width"
             name: "offsetWidth"
             widget: "select"
-            options: ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"]
+            options:
+              ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"]
             default: "0"
-            condition: 
+            condition:
               field: type
               value: image
           - label: "Alt Text"
             name: "alt"
             widget: "string"
             default: "project image alt"
-            condition: 
+            condition:
               field: type
               value: image
           - label: "Caption"
@@ -331,14 +442,14 @@ collections:
             widget: "string"
             default: "project image caption"
             required: false
-            condition: 
+            condition:
               field: type
               value: image
           - label: "Pull Quote"
             name: "pullQuote"
             widget: "string"
             required: false
-            condition: 
+            condition:
               field: type
               value: quote
 
@@ -347,9 +458,9 @@ collections:
     editor:
       preview: false
     folder: "content/articles"
-    path: '{{path}}/index'
-    media_folder: ''
-    public_folder: ''
+    path: "{{title}}/index"
+    media_folder: ""
+    public_folder: ""
     create: true
     fields:
       - { label: "Headline", name: "title", widget: "string" }
@@ -366,33 +477,41 @@ collections:
           - { label: "Alt", name: "alt", widget: "string" }
       - { label: "Date", name: "date", widget: "date" }
       - { label: "Body", name: "body", widget: "markdown" }
-    
-  - name: 'settings'
-    label: 'Settings'
-    media_folder: ''
-    public_folder: ''
+
+  - name: "settings"
+    label: "Settings"
+    media_folder: ""
+    public_folder: ""
     delete: false
-    editor: 
+    editor:
       preview: false
     files:
       - name: "general"
         label: "General"
-        file: 'content/_data/settings/settings.json'
-        description: 'General Site Settings'
-        fields: 
+        file: "content/_data/settings/settings.json"
+        description: "General Site Settings"
+        fields:
           - { label: "Site Title", name: "siteTitle", widget: "string" }
-          - { label: "Site Description", name: "siteDescription", widget: "text" }
+          - {
+              label: "Site Description",
+              name: "siteDescription",
+              widget: "text",
+            }
           - { label: "Site Url", name: "url", widget: "text" }
-          - { label: 'Site Image', name: 'siteImage', widget: 'image' }
-          - { label: 'Menu Background', name: 'menuBackground', widget: 'image' }
-      
+          - { label: "Site Image", name: "siteImage", widget: "image" }
+          - {
+              label: "Menu Background",
+              name: "menuBackground",
+              widget: "image",
+            }
+
       - name: "contact"
         label: "Contact"
-        file: 'content/_data/contact/contact.json'
-        description: 'Contact Information'
-        fields: 
+        file: "content/_data/contact/contact.json"
+        description: "Contact Information"
+        fields:
           - label: Address
-            name: address 
+            name: address
             widget: object
             fields:
               - { label: "Street", name: "street", widget: "string" }
@@ -402,5 +521,15 @@ collections:
               - { label: "Zip", name: "zip", widget: "string" }
           - { label: "Phone", name: "phone", widget: "string" }
           - { label: "Email", name: "email", widget: "string" }
-          - { label: "Instagram", name: "instagram", widget: "string", required: false }
-          - { label: "Facebook", name: "facebook", widget: "string", required: false }
+          - {
+              label: "Instagram",
+              name: "instagram",
+              widget: "string",
+              required: false,
+            }
+          - {
+              label: "Facebook",
+              name: "facebook",
+              widget: "string",
+              required: false,
+            }
