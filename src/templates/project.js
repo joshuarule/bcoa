@@ -75,7 +75,7 @@ const ProjectTemplate = ({ data, intersectionRef }) => {
               {fields.headline} &#8212;
             </h1>
 
-            <div className="marginBottom-5 bp-2_marginBottom-10">
+            <div className="marginBottom-5 bp-2_marginBottom-10 richText">
               <MDXRenderer>{post.body}</MDXRenderer>
             </div>
 

@@ -266,24 +266,20 @@ collections:
         name: isPublished
         widget: boolean
         default: true
-      - label: Condition test
-        name: condition
-        widget: condition
-        conditions:
-          - label: Object one
-            name: one
-            widget: object
-            required: false
-            fields:
-              - { label: "title", name: "title", widget: "string" }
       - label: SEO Overrides
         name: seo
         widget: object
+        collapsed: true
         required: false
         fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Description", name: "description", widget: "text" }
-          - { label: "Image", name: "image", widget: "image" }
+          - { label: "Title", name: "title", widget: "string", required: false }
+          - {
+              label: "Description",
+              name: "description",
+              widget: "text",
+              required: false,
+            }
+          - { label: "Image", name: "image", widget: "image", required: false }
       - {
           label: "Template Key",
           name: "templateKey",
@@ -309,6 +305,7 @@ collections:
       - label: Hero Image
         name: heroImage
         widget: object
+        collapsed: true
         required: false
         fields:
           - {
@@ -327,6 +324,7 @@ collections:
       - label: Featured
         name: featured
         widget: object
+        collapsed: true
         required: false
         fields:
           - label: Set Featured
@@ -337,9 +335,6 @@ collections:
             name: featuredImage
             widget: object
             required: false
-            condition:
-              field: isFeatured
-              value: true
             fields:
               - label: Set Portrait
                 name: isPortrait
@@ -352,17 +347,15 @@ collections:
             widget: text
             required: false
             patter: ["^(.{0,280})$", "Must have less than 280 characters"]
-            condition:
-              field: isFeatured
-              value: true
 
       - label: Index Page Image
         name: previewImage
         widget: object
+        collapsed: true
         required: false
         fields:
-          - { label: "Image", name: "image", widget: "image" }
-          - { label: "Alt", name: "alt", widget: "string" }
+          - { label: "Image", name: "image", widget: "image", required: false }
+          - { label: "Alt", name: "alt", widget: "string", required: false }
 
       - { label: "Body", name: "body", widget: "markdown", required: false }
       - label: Info Object
@@ -376,6 +369,7 @@ collections:
       - label: Primary Image
         name: primaryImage
         widget: object
+        collapsed: true
         required: false
         fields:
           - { label: "Image", name: "image", widget: "image" }
@@ -394,66 +388,64 @@ collections:
               default: "project image caption",
             }
 
-      - label: "Project Gallery Items"
+      - label: "Gallery Items"
+        label_singular: "Gallery"
         name: "projectGallery"
         widget: "list"
         required: false
-        fields:
-          - label: Type
-            name: type
-            widget: select
-            options:
-              - label: Image
-                value: image
-              - label: Quote
-                value: quote
-          - label: "Image"
-            name: "image"
-            widget: "image"
+        types:
+          - label: Image
+            name: image
+            widget: object
             required: false
-            condition:
-              field: type
-              value: image
-          - label: "Column Width"
-            name: "colWidth"
-            widget: "select"
-            options:
-              ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"]
-            default: "1"
-            condition:
-              field: type
-              value: image
-          - label: "Offset width"
-            name: "offsetWidth"
-            widget: "select"
-            options:
-              ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"]
-            default: "0"
-            condition:
-              field: type
-              value: image
-          - label: "Alt Text"
-            name: "alt"
-            widget: "string"
-            default: "project image alt"
-            condition:
-              field: type
-              value: image
-          - label: "Caption"
-            name: "caption"
-            widget: "string"
-            default: "project image caption"
-            required: false
-            condition:
-              field: type
-              value: image
+            fields:
+              - label: "Image"
+                name: "src"
+                widget: "image"
+                required: false
+              - label: "Column Width"
+                name: "colWidth"
+                widget: "select"
+                options:
+                  [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "6",
+                    "7",
+                    "8",
+                    "9",
+                    "10",
+                    "11",
+                    "12",
+                  ]
+                default: "1"
+              - label: "Offset width"
+                name: "offsetWidth"
+                widget: "select"
+                options:
+                  ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"]
+                default: "0"
+              - label: "Alt Text"
+                name: "alt"
+                widget: "string"
+                default: "project image alt"
+              - label: "Caption"
+                name: "caption"
+                widget: "string"
+                default: "project image caption"
+                required: false
           - label: "Pull Quote"
-            name: "pullQuote"
-            widget: "string"
+            name: quote
+            widget: object
             required: false
-            condition:
-              field: type
-              value: quote
+            fields:
+              - label: "Quote"
+                name: "pullQuote"
+                widget: "string"
+                required: false
 
   - name: "articles"
     label: "Articles"
