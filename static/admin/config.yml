@@ -287,12 +287,6 @@ collections:
           default: "project",
         }
       - { label: "Project Name", name: "title", widget: "string" }
-      - {
-          label: "Work Description",
-          name: "workDescription",
-          widget: "string",
-          required: false,
-        }
       - label: Type
         name: type
         widget: select
