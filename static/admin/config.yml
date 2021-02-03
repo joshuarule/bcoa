@@ -394,7 +394,7 @@ collections:
             required: false
             fields:
               - label: "Image"
-                name: "src"
+                name: "image"
                 widget: "image"
                 required: false
               - label: "Column Width"
