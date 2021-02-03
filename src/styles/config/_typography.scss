@@ -1,14 +1,12 @@
 @font-face {
   font-family: "MessinaSansCondensedWeb";
-  src: url("../../static/fonts/MessinaSansCondensedWeb-Bold.eot"); /* IE9 Compat Modes */
-  src: url("../../static/fonts/MessinaSansCondensedWeb-Bold.eot?#iefix")
+  src: url("../fonts/MessinaSansCondensedWeb-Bold.eot"); /* IE9 Compat Modes */
+  src: url("../fonts/MessinaSansCondensedWeb-Bold.eot?#iefix")
       format("embedded-opentype"),
-    /* IE6-IE8 */
-      url("../../static/fonts/MessinaSansCondensedWeb-Bold.woff2")
+    /* IE6-IE8 */ url("../fonts/MessinaSansCondensedWeb-Bold.woff2")
       format("woff2"),
     /* Super Modern Browsers */
-      url("../../static/fonts/MessinaSansCondensedWeb-Bold.woff")
-      format("woff"); /* Pretty Modern Browsers */
+      url("../fonts/MessinaSansCondensedWeb-Bold.woff") format("woff"); /* Pretty Modern Browsers */
   font-weight: 700;
   font-style: normal;
   font-stretch: normal;
@@ -17,13 +15,12 @@
 
 @font-face {
   font-family: "MessinaSansBoldWeb";
-  src: url("../../static/fonts/MessinaSansWeb-Bold.eot"); /* IE9 Compat Modes */
-  src: url("../../static/fonts/MessinaSansWeb-Bold.eot?#iefix")
+  src: url("../fonts/MessinaSansWeb-Bold.eot"); /* IE9 Compat Modes */
+  src: url("../fonts/MessinaSansWeb-Bold.eot?#iefix")
       format("embedded-opentype"),
-    /* IE6-IE8 */ url("../../static/fonts/MessinaSansWeb-Bold.woff2")
-      format("woff2"),
-    /* Super Modern Browsers */
-      url("../../static/fonts/MessinaSansWeb-Bold.woff") format("woff"); /* Pretty Modern Browsers */
+    /* IE6-IE8 */ url("../fonts/MessinaSansWeb-Bold.woff2") format("woff2"),
+    /* Super Modern Browsers */ url("../fonts/MessinaSansWeb-Bold.woff")
+      format("woff"); /* Pretty Modern Browsers */
   font-display: swap;
   font-weight: 700;
   font-style: normal;
@@ -33,13 +30,11 @@
 
 @font-face {
   font-family: "MessinaSansSemiBoldWeb";
-  src: url("../../static/fonts/MessinaSansWeb-SemiBold.eot"); /* IE9 Compat Modes */
-  src: url("../../static/fonts/MessinaSansWeb-SemiBold.eot?#iefix")
+  src: url("../fonts/MessinaSansWeb-SemiBold.eot"); /* IE9 Compat Modes */
+  src: url("../fonts/MessinaSansWeb-SemiBold.eot?#iefix")
       format("embedded-opentype"),
-    /* IE6-IE8 */ url("../../static/fonts/MessinaSansWeb-SemiBold.woff2")
-      format("woff2"),
-    /* Super Modern Browsers */
-      url("../../static/fonts/MessinaSansWeb-SemiBold.woff")
+    /* IE6-IE8 */ url("../fonts/MessinaSansWeb-SemiBold.woff2") format("woff2"),
+    /* Super Modern Browsers */ url("../fonts/MessinaSansWeb-SemiBold.woff")
       format("woff"); /* Pretty Modern Browsers */
   font-display: swap;
   font-weight: 600;
@@ -50,15 +45,14 @@
 
 @font-face {
   font-family: "MessinaSansBookWeb";
-  src: url("../../static/fonts/MessinaSansWeb-Book.eot"); /* IE9 Compat Modes */
-  src: url("../../static/fonts/MessinaSansWeb-Book.eot?#iefix")
+  src: url("../fonts/MessinaSansWeb-Book.eot"); /* IE9 Compat Modes */
+  src: url("../fonts/MessinaSansWeb-Book.eot?#iefix")
       format("embedded-opentype"),
-    /* IE6-IE8 */ url("../../static/fonts/MessinaSansWeb-Book.woff2")
-      format("woff2"),
-    /* Super Modern Browsers */
-      url("../../static/fonts/MessinaSansWeb-Book.woff") format("woff"); /* Pretty Modern Browsers */
+    /* IE6-IE8 */ url("../fonts/MessinaSansWeb-Book.woff2") format("woff2"),
+    /* Super Modern Browsers */ url("../fonts/MessinaSansWeb-Book.woff")
+      format("woff"); /* Pretty Modern Browsers */
   font-display: swap;
-    font-weight: 400;
+  font-weight: 400;
   font-style: normal;
   font-stretch: normal;
   unicode-range: U+000D-FB04;
@@ -74,150 +68,150 @@ $messina-book: "MessinaSansBookWeb", "helvetica neue", "sans-serif";
 
 .f-navigation {
   font-family: $messina-condensedBold;
-  font-size:   51px;
+  font-size: 51px;
   line-height: 56px;
   text-transform: uppercase;
 
   @include bp-1 {
-    font-size:   94px;
+    font-size: 94px;
     line-height: 100px;
   }
 
   @include bp-2 {
-    font-size:   92px;
+    font-size: 92px;
     line-height: 96px;
   }
 }
 
 .f-headline-a {
   font-family: $messina-condensedBold;
-  font-size:   32px;
+  font-size: 32px;
   line-height: 28px;
   text-transform: uppercase;
 
   @include bp-1 {
-    font-size:   35px;
+    font-size: 35px;
     line-height: 32px;
   }
 
   @include bp-2 {
-    font-size:   48px;
+    font-size: 48px;
     line-height: 40px;
   }
 }
 
 .f-headline-b {
   font-family: $messina-condensedBold;
-  font-size:   32px;
+  font-size: 32px;
   line-height: 28px;
   text-transform: uppercase;
 
   @include bp-1 {
-    font-size:   35px;
+    font-size: 35px;
     line-height: 32px;
   }
 
   @include bp-2 {
-    font-size:   60px;
+    font-size: 60px;
     line-height: 56px;
   }
 }
 
 .f-headline-c {
   font-family: $messina-condensedBold;
-  font-size:   28px;
+  font-size: 28px;
   line-height: 28px;
   text-transform: uppercase;
 
   @include bp-1 {
-    font-size:   30px;
+    font-size: 30px;
     line-height: 32px;
   }
 
   @include bp-2 {
-    font-size:   37px;
+    font-size: 37px;
     line-height: 36px;
   }
 }
 
 .f-headline-d {
   font-family: $messina-condensedBold;
-  font-size:   32px;
+  font-size: 32px;
   line-height: 28px;
   text-transform: uppercase;
 
   @include bp-1 {
-    font-size:   35px;
+    font-size: 35px;
     line-height: 32px;
   }
 
   @include bp-2 {
-    font-size:   50px;
+    font-size: 50px;
     line-height: 44px;
   }
 }
 
 .f-page-title {
   font-family: $messina-bold, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size:   16px;
+  font-size: 16px;
   line-height: 16px;
   text-decoration: underline;
 
   @include bp-1 {
-    font-size:   20px;
+    font-size: 20px;
     line-height: 24px;
   }
 
   @include bp-2 {
-    font-size:   26px;
+    font-size: 26px;
     line-height: 28px;
   }
 }
 
 .f-subhead {
   font-family: $messina-bold, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size:   15px;
+  font-size: 15px;
   line-height: 16px;
 
   @include bp-1 {
-    font-size:   16px;
+    font-size: 16px;
     line-height: 16px;
   }
 
   @include bp-2 {
-    font-size:   20px;
+    font-size: 20px;
     line-height: 24px;
   }
 }
 
 .f-display-copy {
   font-family: $messina-semiBold, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size:   21px;
+  font-size: 21px;
   line-height: 24px;
 
   @include bp-1 {
-    font-size:   31px;
+    font-size: 31px;
     line-height: 36px;
   }
 
   @include bp-2 {
-    font-size:   42px;
+    font-size: 42px;
     line-height: 44px;
   }
 }
 
 @mixin f-copy {
   font-family: $messina-book, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size:   16px;
+  font-size: 16px;
   line-height: 20px;
 
   @include bp-1 {
-    font-size:   16px;
+    font-size: 16px;
     line-height: 20px;
   }
 
   @include bp-2 {
-    font-size:   22px;
+    font-size: 22px;
     line-height: 28px;
   }
 }
@@ -231,19 +225,18 @@ $messina-book: "MessinaSansBookWeb", "helvetica neue", "sans-serif";
   font-family: $messina-bold, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-
 @mixin f-copy-book {
   font-family: $messina-book, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size:   16px;
+  font-size: 16px;
   line-height: 20px;
 
   @include bp-1 {
-    font-size:   16px;
+    font-size: 16px;
     line-height: 20px;
   }
 
   @include bp-2 {
-    font-size:   20px;
+    font-size: 20px;
     line-height: 24px;
   }
 }
@@ -254,97 +247,97 @@ $messina-book: "MessinaSansBookWeb", "helvetica neue", "sans-serif";
 
 .f-credit {
   font-family: $messina-condensedBold;
-  font-size:   16px;
+  font-size: 16px;
   line-height: 20px;
 
   @include bp-1 {
-    font-size:   16px;
+    font-size: 16px;
     line-height: 20px;
   }
 
   @include bp-2 {
-    font-size:   20px;
+    font-size: 20px;
     line-height: 24px;
   }
 }
 
 .f-caption {
   font-family: $messina-book;
-  font-size:   16px;
+  font-size: 16px;
   line-height: 20px;
 
   @include bp-1 {
-    font-size:   16px;
+    font-size: 16px;
     line-height: 20px;
   }
 
   @include bp-2 {
-    font-size:   20px;
+    font-size: 20px;
     line-height: 24px;
   }
 }
 
 .f-slideshow-text {
   font-family: $messina-book;
-  font-size:   16px;
+  font-size: 16px;
   line-height: 16px;
 
   @include bp-1 {
-    font-size:   21px;
+    font-size: 21px;
     line-height: 24px;
   }
 
   @include bp-2 {
-    font-size:   26px;
+    font-size: 26px;
     line-height: 28px;
   }
 }
 
 .f-footer-a {
   font-family: $messina-condensedBold;
-  font-size:   14px;
+  font-size: 14px;
   line-height: 17px;
   text-transform: uppercase;
 
   @include bp-1 {
-    font-size:   14px;
+    font-size: 14px;
     line-height: 17px;
   }
 
   @include bp-2 {
-    font-size:   18px;
+    font-size: 18px;
     line-height: 24px;
   }
 }
 
 .f-footer-b {
   font-family: $messina-book;
-  font-size:   14px;
+  font-size: 14px;
   line-height: 17px;
 
   @include bp-1 {
-    font-size:   14px;
+    font-size: 14px;
     line-height: 17px;
   }
 
   @include bp-2 {
-    font-size:   18px;
+    font-size: 18px;
     line-height: 24px;
   }
 }
 
 .f-news-numbers {
   font-family: $messina-book;
-  font-size:   11px;
+  font-size: 11px;
   line-height: 12px;
 
   @include bp-1 {
-    font-size:   11px;
+    font-size: 11px;
     line-height: 12px;
   }
 
   @include bp-2 {
-    font-size:   14px;
+    font-size: 14px;
     line-height: 16px;
   }
 }

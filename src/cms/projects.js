@@ -116,7 +116,7 @@ export default (props) => {
           )}
         </div>
         <div>
-          {!!projectGallery.length && (
+          {projectGallery && (
             <div className="project-images grid-12col">
               {projectGallery.map((item, i) => {
                 if (item) {
