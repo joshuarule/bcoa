@@ -262,7 +262,7 @@ collections:
     path: "{{slug}}/index"
     create: true
     fields:
-      - label: Set Published
+      - label: Show on site
         name: isPublished
         widget: boolean
         default: true
@@ -321,7 +321,7 @@ collections:
           widget: "string",
           required: false,
         }
-      - label: Featured
+      - label: Featured Page Info
         name: featured
         widget: object
         collapsed: true

@@ -9,10 +9,11 @@ export default (props) => {
   const condition = entry.getIn(["data", "condition"]);
   const body = entry.getIn(["data", "body"]);
   const heroImg =
-    props.widgetsFor("heroImage").getIn(["data", "url"]) &&
+    props.widgetsFor("heroImage").getIn(["data", "image"]) &&
     props
-      .getAsset(props.widgetsFor("heroImage").getIn(["data", "url"]))
+      .getAsset(props.widgetsFor("heroImage").getIn(["data", "image"]))
       .toString();
+
   const primaryImg = {
     image:
       props.widgetsFor("primaryImage").getIn(["data", "image"]) &&
@@ -64,12 +65,14 @@ export default (props) => {
             <h1 className="f-headline-b marginBottom-4 bp-1_marginBottom-13 bp-2_marginBottom-11">
               {headline}-
             </h1>
-            <div
-              className="md marginBottom-5 bp-1_marginBottom-5 bp-2_marginBottom-10"
-              dangerouslySetInnerHTML={{ __html: body }}
-            />
+            {body && (
+              <div
+                className="md marginBottom-5 bp-1_marginBottom-5 bp-2_marginBottom-10"
+                dangerouslySetInnerHTML={{ __html: body }}
+              />
+            )}
 
-            {infoObject && (
+            {!!infoObject.length && (
               <div className="infoObjects">
                 <dl className="grid-2col marginBottom-12 bp-1_marginBottom-16 bp-2_marginBottom-24">
                   {infoObject.map((item, i) => {
@@ -113,7 +116,7 @@ export default (props) => {
           )}
         </div>
         <div>
-          {projectGallery && (
+          {!!projectGallery.length && (
             <div className="project-images grid-12col">
               {projectGallery.map((item, i) => {
                 if (item) {
