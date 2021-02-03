@@ -58,11 +58,7 @@ export default ({
   navHeight,
   handleMenuButtonClick,
 }) => {
-  console.log(isWindowLarge);
-  const headerLogo =
-    isWindowLarge === undefined || isWindowLarge
-      ? icons.menuLogoLarge
-      : icons.menuLogoSmall;
+  const headerLogo = !isWindowLarge ? icons.menuLogoSmall : icons.menuLogoLarge;
   return (
     <div>
       <header className={visible ? "c-white bg-transparent" : ""}>
