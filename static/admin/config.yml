@@ -306,9 +306,15 @@ collections:
               label: "Portrait Hero Image",
               name: "portraitImage",
               widget: "image",
+              required: false,
             }
-          - { label: "Landscape Hero Image", name: "image", widget: "image" }
-          - { label: "Alt", name: "alt", widget: "string" }
+          - {
+              label: "Landscape Hero Image",
+              name: "image",
+              widget: "image",
+              required: false,
+            }
+          - { label: "Alt", name: "alt", widget: "string", required: false }
       - {
           label: "Headline",
           name: "headline",
@@ -426,6 +432,7 @@ collections:
                 name: "alt"
                 widget: "string"
                 default: "project image alt"
+                required: false
               - label: "Caption"
                 name: "caption"
                 widget: "string"
