@@ -16,8 +16,7 @@ previewImage:
   image: bc-oa_lofts.jpg
 primaryImage:
   alt: project image alt
-  caption:
-    Live edge dining, custom banquette and whitewashed exposed brick at the
+  caption: Live edge dining, custom banquette and whitewashed exposed brick at the
     Crosby Loft II
   image: 45-crosby_5n_-11-.jpg
 projectGallery:
@@ -40,6 +39,12 @@ projectGallery:
     alt: project image alt
     caption: project image caption
     image: 20-greene-st_-11-.jpg
+  - type: image
+    colWidth: "9"
+    offsetWidth: "0"
+    alt: project image alt
+    caption: project image caption
+    image: bc-oa_lofts.jpg
 ---
 
 BC—OA's first project was a Soho Loft renovation - [Crosby I](https://bc-oa.com/projects/crosby-loft-1/) - , which was published in Dwell and featured in Dwell Home Tours, and has led to many other loft renovations in Soho and Tribeca. The loft conversion to residential is a particular challenge, often times with odd proportions and limited access to daylight. Exposing the "old" industrial finishes - exposed brick, timber beams and columns, tin ceilings and cast-iron columns - and inserting the "new" is a challenge addressed differently by each client, and each project is made unique by the collaborative decisions on embracing the particularities of each loft.
