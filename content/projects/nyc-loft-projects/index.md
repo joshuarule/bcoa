@@ -22,29 +22,38 @@ primaryImage:
 projectGallery:
   - type: image
     colWidth: "8"
-    offsetWidth: "6"
+    offsetWidth: "0"
+    alt: project image alt
+    caption: S-M-L Loft features rusted perforated steel feature objects in the
+      space, playing off of the exposed materials of the original manufacturing
+      building
+    image: 20-greene-st_-11-.jpg
+  - type: image
+    colWidth: "5"
+    offsetWidth: "0"
+    alt: project image alt
+    caption: project image caption
+    image: 45-crosby_5s_-18-.png
+  - type: image
+    colWidth: "7"
+    offsetWidth: "0"
     alt: project image alt
     caption: "A new dropped ceiling conceals a cove light washing the exposed
       original brick wall "
     image: 45-crosby_5s_-7-.jpg
   - type: image
-    colWidth: "4"
-    offsetWidth: "8"
-    alt: project image alt
-    caption: project image caption
-    image: 45-crosby_5s_-18-.png
-  - type: image
-    colWidth: "8"
-    offsetWidth: "4"
-    alt: project image alt
-    caption: project image caption
-    image: 20-greene-st_-11-.jpg
-  - type: image
     colWidth: "9"
     offsetWidth: "0"
     alt: project image alt
     caption: project image caption
-    image: bc-oa_lofts.jpg
+    image: 17-thompson_-8-.jpg
+  - type: image
+    colWidth: "1"
+    offsetWidth: "0"
+    image: 20-greene-st_-21-.jpg
+  - type: image
+    colWidth: "1"
+    offsetWidth: "0"
 ---
 
 BC—OA's first project was a Soho Loft renovation - [Crosby I](https://bc-oa.com/projects/crosby-loft-1/) - , which was published in Dwell and featured in Dwell Home Tours, and has led to many other loft renovations in Soho and Tribeca. The loft conversion to residential is a particular challenge, often times with odd proportions and limited access to daylight. Exposing the "old" industrial finishes - exposed brick, timber beams and columns, tin ceilings and cast-iron columns - and inserting the "new" is a challenge addressed differently by each client, and each project is made unique by the collaborative decisions on embracing the particularities of each loft.
