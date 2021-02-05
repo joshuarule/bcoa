@@ -21,18 +21,18 @@ primaryImage:
   image: 45-crosby_5n_-11-.jpg
 projectGallery:
   - type: image
-    colWidth: "4"
-    offsetWidth: "0"
-    alt: project image alt
-    caption: project image caption
-    image: 45-crosby_5s_-18-.png
-  - type: image
     colWidth: "8"
-    offsetWidth: "4"
+    offsetWidth: "6"
     alt: project image alt
     caption: "A new dropped ceiling conceals a cove light washing the exposed
       original brick wall "
     image: 45-crosby_5s_-7-.jpg
+  - type: image
+    colWidth: "4"
+    offsetWidth: "8"
+    alt: project image alt
+    caption: project image caption
+    image: 45-crosby_5s_-18-.png
   - type: image
     colWidth: "8"
     offsetWidth: "4"
