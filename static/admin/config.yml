@@ -457,6 +457,12 @@ collections:
     create: true
     fields:
       - { label: "Headline", name: "title", widget: "string" }
+      - {
+          label: "Template Key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "article",
+        }
       - label: Image
         name: image
         widget: object
@@ -468,7 +474,12 @@ collections:
             default: false
           - { label: "Image", name: "image", widget: "image" }
           - { label: "Alt", name: "alt", widget: "string" }
-      - { label: "Date", name: "date", widget: "date" }
+      - {
+          label: "Date",
+          name: "date",
+          widget: "datetime",
+          date_format: "YYYY-MM-DD",
+        }
       - { label: "Body", name: "body", widget: "markdown" }
 
   - name: "settings"
