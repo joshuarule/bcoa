@@ -91,11 +91,11 @@ class Work extends Component {
                         <h1 className="f-subhead">
                           {project.frontmatter.title}
                         </h1>
-                        <h2
-                          className=" f-subhead
+                        {/* <h2
+                          className="f-subhead
                                         marginBottom-9
                                         bp-2_marginBottom-21"
-                        ></h2>
+                        ></h2> */}
                       </Link>
                     </article>
                   </li>

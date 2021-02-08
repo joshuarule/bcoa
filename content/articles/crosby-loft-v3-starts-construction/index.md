@@ -1,6 +1,6 @@
 ---
 templateKey: article-page
-title: "Crosby Loft V3 Starts Construction "
+title: "Crosby Loft V3 Starts Construction"
 image:
   alt: Loft Architecture NYC Renovation Soho NYC
   image: 45-c-2n-construction.jpg
