@@ -29,18 +29,18 @@ projectGallery:
       building
     image: 20-greene-st_-11-.jpg
   - type: image
-    colWidth: "5"
+    colWidth: "4"
     offsetWidth: "0"
     alt: project image alt
     caption: project image caption
-    image: 45-crosby_5s_-18-.png
+    image: 45-crosby_5s_-18-.jpg
   - type: image
-    colWidth: "7"
+    colWidth: "8"
     offsetWidth: "0"
     alt: project image alt
     caption: "A new dropped ceiling conceals a cove light washing the exposed
       original brick wall "
-    image: 45-crosby_5s_-7-.jpg
+    image: 45-crosby_5s_-3-small.jpg
   - type: image
     colWidth: "9"
     offsetWidth: "0"
@@ -48,9 +48,9 @@ projectGallery:
     caption: project image caption
     image: 17-thompson_-8-.jpg
   - type: image
-    colWidth: "1"
+    colWidth: "8"
     offsetWidth: "0"
-    image: 20-greene-st_-21-.jpg
+    image: 20-greene-st_-21-_1820.jpg
   - type: image
     colWidth: "1"
     offsetWidth: "0"
