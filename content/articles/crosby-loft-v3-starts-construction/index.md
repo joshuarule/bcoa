@@ -1,5 +1,5 @@
 ---
-templateKey: article-page
+templateKey: article
 title: "Crosby Loft V3 Starts Construction"
 image:
   alt: BC–OA Loft Architecture NYC Renovation Soho NYC

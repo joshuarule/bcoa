@@ -1,5 +1,5 @@
 ---
-templateKey: article-page
+templateKey: article
 title: Bronwyn Judges AIA Orlando 2020 Design Awards
 image:
   alt: AIA Juror Architecture Design Awards

@@ -1,5 +1,5 @@
 ---
-templateKey: article-page
+templateKey: article
 title: 12th Street Lobby Design Construction Ready
 image:
   alt: Lobby Architect Architecture NYC Renovation Greenwich Village
